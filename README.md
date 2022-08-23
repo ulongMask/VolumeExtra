@@ -1,2 +1,2 @@
 # VolumeExtra
-VolumeExtra is PineScript for Tradingview
+VolumeExtra is PineScript file for Tradingview
