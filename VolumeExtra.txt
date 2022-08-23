@@ -1,0 +1,18 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © ulong_Mask
+
+//@version=5
+indicator(title='Volume Extra (@ulong_Mask)')
+
+maxvol = input.int(20000, minval=1, title='MaxVol')
+lw = input.int(3, minval=1, title='LineWidth')
+
+getColor() =>
+    if volume > maxvol
+        color.yellow
+    else if close >= open
+        color.green
+    else
+        color.red
+    
+plot(volume, title='Volume Extra', style=plot.style_histogram, linewidth=lw, color=getColor())
